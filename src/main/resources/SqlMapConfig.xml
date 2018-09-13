@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<!-- 配置 Mapper.xml 中的 parameterType 和 resultType 的别名 -->
+	<typeAliases>
+		<!-- 批量定义别名, 自动扫描包下的所有类, 别名就是类名(不区分大小写) -->
+		<package name="com.dreamli.domain"/>
+	</typeAliases>
+	
+	<mappers>
+		<package name="com.dreamli.dao.mapper"/>		
+	</mappers>
+	
+
+</configuration>
