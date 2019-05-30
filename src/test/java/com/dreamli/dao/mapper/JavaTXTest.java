@@ -38,7 +38,7 @@ public class JavaTXTest {
 		
 		try {
 			jdbcTemplate.update("update user set sex = 1 where id = ?", 10);
-			
+
 //			int x = 1 / 0;
 		} catch (Exception e) {
 			e.printStackTrace();

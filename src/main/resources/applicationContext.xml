@@ -20,6 +20,7 @@
 
 	<context:property-placeholder location="classpath:db.properties" />
 	
+	<!-- 编程式事务管理 -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="${jdbc.driver}" />
         <property name="url" value="${jdbc.url}" />
@@ -35,6 +36,8 @@
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<constructor-arg ref="dataSource"/>
 	</bean>
+	
+	<!-- Spring + Mybatis -->
 	
 	 <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" /><!-- 指定数据源 -->
